@@ -23,8 +23,11 @@ git clone https://github.com/ikasoba/activity-kraken/
 # 初期化用のスクリプトを実行する場合
 sh init.sh
 
-# 実行
+# 実行 (dockerを使う場合)
 docker compose up
+
+# 実行 (dockerを使わない場合)
+deno run -A main.ts
 ```
 
 # 設定
@@ -35,7 +38,8 @@ docker compose up
 `.env` へ設定を記入してください。
 各設定の説明は `.env-example` に詳しく書いてあります。
 
-プロキシ先をmisskeyいんすあなどへ指定することでこのプロキシを適用できます。
+プロキシ先を自分のmisskeyインスタンスなどへ指定することでこのプロキシを適用できます。
+同じコンピューターでプロキシ先を実行している場合などはループバックアドレスなどで指定する必要があります。
 また、インスタンスのドメインなどからこのプロキシへ接続できるようにしないと効果はありません。
 
 ```sh
