@@ -24,7 +24,8 @@ export function createMainProxy(opts: {
         "-",
         filterSecretHeader(Object.fromEntries(ctx.req.raw.headers))
       );
-      return ctx.text("", 403);
+
+      return ctx.text("", 200);
     }
 
     console.info(
