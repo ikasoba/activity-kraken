@@ -22,6 +22,9 @@ git clone https://github.com/ikasoba/activity-kraken/
 
 # 初期化用のスクリプトを実行する場合
 sh init.sh
+
+# 実行
+docker compose up
 ```
 
 # 設定
@@ -29,7 +32,11 @@ sh init.sh
 > [!NOTE]
 > `.env-example` をコピーして `.env` を作成することをおすすめします。
 
+`.env` へ設定を記入してください。
 各設定の説明は `.env-example` に詳しく書いてあります。
+
+プロキシ先をmisskeyいんすあなどへ指定することでこのプロキシを適用できます。
+また、インスタンスのドメインなどからこのプロキシへ接続できるようにしないと効果はありません。
 
 ```sh
 # プロキシが動くポート番号
