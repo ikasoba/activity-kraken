@@ -1,0 +1,9 @@
+{
+  "lock": false,
+  "imports": {
+    "hono/": "https://deno.land/x/hono@v4.0.3/",
+    "dotenv/": "https://deno.land/std@0.216.0/dotenv/",
+    "lizod": "npm:lizod/",
+    "cheerio": "npm:cheerio/"
+  }
+}

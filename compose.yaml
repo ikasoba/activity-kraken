@@ -1,0 +1,10 @@
+services:
+  proxy:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    volumes:
+      - ./content-filter.txt:/app/content-filter.txt
+      - ./host-filter.txt:/app/host-filter.txt
