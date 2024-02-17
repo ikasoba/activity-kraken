@@ -29,7 +29,11 @@ const proxy = createMainProxy({
     }),
     isSafeContent: createContentFilter({
       filters: await Deno.readTextFile(env.CONTENT_FILTER_FILE).then((x) =>
-        x.split(/[\r\n]+/).map((x) => new RegExp(x, "u"))
+        x
+          .replace(/[\r\n]+$/, "")
+          .split(/[\r\n]+/)
+          .filter((x) => x)
+          .map((x) => new RegExp(x, "u"))
       ),
       maxContentSize: maxContentSize,
       maxMentions: parseInt(env.MAX_MENTIONS),
