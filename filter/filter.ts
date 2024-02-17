@@ -37,11 +37,7 @@ export function createMainFilter(opts: {
         }
 
         if ($AcCreate(obj)) {
-          if (obj.object.content == null) {
-            return false;
-          }
-
-          if (!opts.isSafeContent(obj.object.content)) {
+          if (obj.object.content && !opts.isSafeContent(obj.object.content)) {
             return false;
           }
         }

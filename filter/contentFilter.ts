@@ -13,7 +13,7 @@ export function createContentFilter(opts: ContentFilterOptions) {
 
     const $ = load(content);
 
-    if ($("a.mention").length > opts.maxMentions) {
+    if ($("a.mention").length >= opts.maxMentions) {
       return false;
     }
 

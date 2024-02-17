@@ -1,9 +1,12 @@
 import { $object, $const, $opt, $string, Infer } from "lizod";
 
 export type ApObject = Infer<typeof $ApObject>;
-export const $ApObject = $object({
-  content: $opt($string),
-});
+export const $ApObject = $object(
+  {
+    content: $opt($string),
+  },
+  false
+);
 
 export type AcCreate = Infer<typeof $AcCreate>;
 export const $AcCreate = $object(
